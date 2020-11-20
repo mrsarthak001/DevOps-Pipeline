@@ -7,6 +7,12 @@ pipeline{
                 bat "mvn clean"
             }
         }
+        stage('Test'){
+            steps{
+                echo "Test Stage"
+                bat "mvn test"
+            }
+        }
         
         stage('Package'){
             steps{
